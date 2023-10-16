@@ -1,7 +1,7 @@
 # ComputerSystemAdministration
-[NYCU 2023 Fall] Computer System Administration
-Professor: [Meng-Hsun Tsai](https://www.cs.nycu.edu.tw/members/detail/_253)
-Course Website(public) [here](https://nasa.cs.nctu.edu.tw/sa/2023/)
+* [NYCU 2023 Fall] Computer System Administration
+* Professor: [Meng-Hsun Tsai](https://www.cs.nycu.edu.tw/members/detail/_253)
+* Course Website(public) [here](https://nasa.cs.nctu.edu.tw/sa/2023/)
 
 * You can see homework explanation pdf file in each folder.
 
