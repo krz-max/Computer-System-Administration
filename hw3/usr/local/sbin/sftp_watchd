@@ -1,0 +1,18 @@
+#!/bin/sh
+
+LOG_FILE="/var/log/sftp.log"
+TARGET_DIR="/home/sftp/hidden/.exe"
+DEST_LOG_FILE="/var/log/sftp_watchd.log"
+
+tail -n0 -F ${LOG_FILE} | while read line; do
+	dummy=$(echo ${line} | grep -e 'open /.*/..&\.exe')
+	username=""
+	filepath=""
+	if [ -n "${dummy}" ]; then
+		filename=$(echo ${line} | awk -F\" '{print $2}')
+		filepath="/home/sftp${filename}"
+		username=$(ls -al ${filepath} | awk -F' ' '{print $3}')
+		mv ${filepath} ${TARGET_DIR}
+		printf "${line%:*}: ${filepath} violate file detected. Uploaded by ${username}.\n" >> ${DEST_LOG_FILE}
+	fi
+done

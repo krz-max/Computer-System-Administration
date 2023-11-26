@@ -1,0 +1,35 @@
+#!/bin/sh
+
+. /etc/rc.subr
+
+name="sftp_watchd"
+rcvar="${name}_enable"
+pidfile="/var/run/${name}.pid"
+command="/usr/sbin/daemon"
+command_args="-c -f -P ${pidfile} -t ${name} -o /var/log/sftp_watchd.log -r /usr/local/sbin/sftp_watchd"
+
+stop_cmd="${name}_stop"
+status_cmd="${name}_status"
+
+sftp_watchd_stop() {
+	if [ -f ${pidfile} ]; then
+		pid=$(cat  ${pidfile})
+		echo "Kill: ${pid}"
+		kill ${pid}
+		kill $((pid+2)) # Remove the tail process, not necessary
+		return 0
+	fi
+	echo "${name} is not running."
+}
+
+sftp_watchd_status() {
+	if [ -f ${pidfile} ]; then
+		pid=$(cat  ${pidfile})
+		echo "${name} is runnin as pid ${pid}."
+		return 0
+	fi
+	echo "${name} is not running."
+}
+
+load_rc_config $name
+run_rc_command $1
