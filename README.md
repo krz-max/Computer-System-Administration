@@ -20,6 +20,11 @@
 2. Write a rc script that captures all the sftp-related logs
 3. Use ZFS to write a backup system for the sftp directory built in part 1.
 
-## HW4+HW5: Web Service, NFS & Firewall
+## HW4+HW5: Web Service & Firewall
 * Combined due to limited schedule
+1. Learn how set up http, https(ssl), http3.
+2. Learn how to set up firewall rules(i.e. packet filter).
+
+
+My detailed building guide for hw3 and hw4 can be found [here](https://beryl-astronaut-f3d.notion.site/Computer-System-Administration-815d33631542418fb74dae40e5fa623c)
 
