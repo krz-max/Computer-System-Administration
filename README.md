@@ -8,7 +8,7 @@
 
 
 ## HW1: Install FreeBSD/Ubuntu & WireGuard
-* This is the iso [file](freebsd.csie.nctu.edu.tw/pub/FreeBSD/releases/ISO-IMAGES/13.2/)) of the FreeBSD I downloaded.
+* This is the iso [file](freebsd.csie.nctu.edu.tw/pub/FreeBSD/releases/ISO-IMAGES/13.2/) of the FreeBSD I downloaded.
 * You can use it to install FreeBSD in VirtualBox
 
 ## HW2: Shell script & System Info
