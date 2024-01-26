@@ -4,7 +4,7 @@
 * Course Website(public) [here](https://nasa.cs.nctu.edu.tw/sa/2023/)
 
 * You can see homework explanation pdf file in each folder.
-* My notion page is [here(hasn't yet published)](). It comes handy in HW3.
+* My detailed building guide for hw3 and hw4 can be found [here](https://beryl-astronaut-f3d.notion.site/Computer-System-Administration-815d33631542418fb74dae40e5fa623c)
 
 
 ## HW1: Install FreeBSD/Ubuntu & WireGuard
@@ -26,5 +26,5 @@
 2. Learn how to set up firewall rules(i.e. packet filter).
 
 
-My detailed building guide for hw3 and hw4 can be found [here](https://beryl-astronaut-f3d.notion.site/Computer-System-Administration-815d33631542418fb74dae40e5fa623c)
+
 
