@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ "$#" -ne 3 ]; then
+    echo "Usage: iamgoodguy <IP> -p <ssh|web>"
+    exit 1
+fi
+IP=$1
+SERVICE=$3
+
+if [ "$SERVICE" = "ssh" ]; then
+    sudo fail2ban-client set bsd-ssh-pf unbanip "$IP"
+elif [ "$SERVICE" = "web" ]; then
+    sudo fail2ban-client set nginx-http-auth unbanip "$IP"
+else
+    echo "Usage: iamgoodguy <IP> -p <ssh|web>"
+    exit 1
+fi
+```

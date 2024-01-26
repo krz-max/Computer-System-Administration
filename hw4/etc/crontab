@@ -1,0 +1,1 @@
+@every_second               judge   logrotate /home/judge/log/judge-rotate.conf >/dev/null 2>&1
